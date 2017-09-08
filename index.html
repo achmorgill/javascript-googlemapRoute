@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>80 DAYS Front End Test</title>
+	
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+	
+	<div class="grid-container">
+		
+		<div class="grid-x grid-padding-x">
+			<div class="large-12 cell">
+				<h1>80 DAYS Front End Test</h1>
+			</div>
+		</div>
+
+		<div class="grid-x grid-padding-x">
+			<div class="large-12 cell">
+				<div class="callout">
+					<p>Take a look inside the <code>app.js</code> file – a function has been started which references an array of location data named <code>trackerData</code>. Each item in the array is in the following format:</p>
+					<pre>
+{
+	"Id":4794,
+	"Created":"\/Date(1504627200000)\/",
+	"Title":"Waypoint 50","
+	Description":"Latitude:45.68648, Longitude:-87.11497, Speed:23.63Km/H",
+	"Latitude":45.686480000,
+	"Longitude":-87.114970000,
+	"Altitude":186.000000000,
+	"Speed":23.630000000
+}
+					</pre>
+					<h3>Tasks:</h3>
+					<ol>
+						<li>Use the Google Maps API polyline methods to draw a path of all the points in the array.</li>
+						<li>Display a marker at the start and end points of the path.</li>
+						<li><em>Bonus:</em> display the altitude and speed of the final point in a box below the map</li>
+					</ol>
+					<h3>Useful resources:</h3>
+					<ul>
+						<li><a href="https://developers.google.com/maps/" target="_blank">Google Maps API - https://developers.google.com/maps/</a></li>
+						<li><a href="https://developers.google.com/maps/documentation/javascript/examples/polyline-simple" target="_blank">Simple Polylines - https://developers.google.com/maps/documentation/javascript/examples/polyline-simple</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="grid-x grid-padding-x">
+			<div class="large-12 cell">
+				<div id="google-map"></div>
+			</div>
+		</div>
+		</br>
+			<div id="box">
+				<box>
+					<h5>Information Taken at Destination</h5>
+					Altitude
+				</box>
+			</div>
+		
+	</div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+</body>
+</html>
